@@ -1,18 +1,73 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
-const handleSingUp = (event) => {
-    event.preventDefault()
-}
-const handleWithGoogleSingUp = () => {
+import { ToastContainer, toast } from 'react-toastify';
+import { AuthContext } from '../../Providers/AuthProvider';
+import { updateProfile } from 'firebase/auth';
+import "react-toastify/dist/ReactToastify.css";
 
-}
 const Register = () => {
+    const { createUser,googleSignIn } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false);
+
+    const handleSingUp = (event) => {
+        event.preventDefault()
+        const form = event.target;
+        const displayName = form.displayName.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const photoUrl = form.photoUrl.value;
+        // Password validation regex pattern
+        const passwordRegex = /^.{6,}$/;
+
+        // Check for blank input fields
+        if (!displayName || !email || !password || !photoUrl) {
+            toast.error("A user cannot submit empty email and password fields");
+            return;
+        }
+
+        if (!passwordRegex.test(password)) {
+            toast.error("The password is less than 6 characters");
+            return;
+        }
+
+        createUser(email, password, displayName, photoUrl)
+            .then((result) => {
+                // User created successfully, update profile
+                const loggedUser = result.user;
+                return updateProfile(loggedUser, {
+                    displayName: displayName,
+                    photoURL: photoUrl,
+                }).then(() => {
+                    console.log("Profile updated successfully");
+                    console.log(loggedUser);
+                    toast.success("User created successfully");
+                    form.reset();
+                });
+            })
+            .catch((error) => {
+                console.error("Error creating user:", error.message);
+                toast.error(error.message);
+            });
+    }
+
+    // Google Sign in with popup
+    const handleWithGoogleSingUp = () => {
+        googleSignIn()
+        .then((result)=>{
+            const loggedGoogleUser = result.user;
+            console.log(loggedGoogleUser)
+            toast.success('User Login Successfully!!')
+        })
+        .catch((error) => {
+            console.error(error.message);
+            toast.error(error.message);
+          });
+    }
     const toggleShowPassword = () => {
         setShowPassword(!showPassword);
     };
+
     return (
         <section className="max-w-7xl mx-auto px-4 py-12">
             <ToastContainer />

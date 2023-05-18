@@ -1,6 +1,7 @@
 import { FaGoogle } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
     const handleLogIn = (event) => {
