@@ -12,7 +12,7 @@ const Footer = () => {
                 <div>
                     <span className="footer-title">Contact</span>
                     <a className="link link-hover">Phone: +1 (555) 123-4567</a>
-                    <a className="link link-hover">Email: info@playtechtoys.com</a>
+                    <a className="link link-hover">Email: info@smarttoymarket.com</a>
                     <a className="link link-hover">Fax: +1 (555) 987-6543</a>
 
                 </div>
