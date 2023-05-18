@@ -1,15 +1,56 @@
+import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
+    const { singIn, googleSignIn } = useContext(AuthContext);
     const handleLogIn = (event) => {
         event.preventDefault()
 
-    }
-    const handleWithGoogleSingIn = () => {
 
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        // Check for blank input fields
+        if (!email || !password) {
+            toast.error("A user cannot login empty email and password fields!!");
+            return;
+        }
+
+        singIn(email, password)
+            .then((result) => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                toast.success("User login successfully!!");
+                // navigate(from)
+                form.reset();
+            })
+            .catch((error) => {
+                console.error(error.message);
+                if (error.code === "auth/wrong-password") {
+                    toast.error("Incorrect password! Please try again.");
+                } else {
+                    toast.error(error.message);
+                }
+            });
+
+    }
+    // Google Sign in with popup
+    const handleWithGoogleSingUp = () => {
+        googleSignIn()
+            .then((result) => {
+                const loggedGoogleUser = result.user;
+                console.log(loggedGoogleUser)
+                toast.success('User Login Successfully!!')
+            })
+            .catch((error) => {
+                console.error(error.message);
+                toast.error(error.message);
+            });
     }
     return (
         <section className="max-w-7xl mx-auto px-4 py-12">
@@ -96,7 +137,7 @@ const Login = () => {
                     <span className="my-0 mx-[10px] font-bold text-slate-700">or</span>
                     <hr className="flex-1 border-t border-slate-400" />
                 </div>
-                <div onClick={handleWithGoogleSingIn} className="flex items-center justify-center gap-[6px] w-ful; mx-6 h-[50px] border border-slate-600 rounded-md cursor-pointer mb-6">
+                <div onClick={handleWithGoogleSingUp} className="flex items-center justify-center gap-[6px] w-ful; mx-6 h-[50px] border border-slate-600 rounded-md cursor-pointer mb-6">
                     {/* <img  src={google} alt="" /> */}
                     <FaGoogle className="w-7 h-7 rounded-md"></FaGoogle>
                     <span>Continue with Google</span>
