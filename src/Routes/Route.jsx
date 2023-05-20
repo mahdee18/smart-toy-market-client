@@ -8,11 +8,13 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ProductDetails from "../pages/Shared/ProductDetails/ProductDetails";
 import AllToys from "../pages/AllToys/AllToys";
+import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement:<NotFoundPage></NotFoundPage>,
         children: [
             {
                 path: '/',
