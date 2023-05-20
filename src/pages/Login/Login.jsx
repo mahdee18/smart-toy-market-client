@@ -1,16 +1,18 @@
 import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
     const { singIn, googleSignIn } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/'
+
     const handleLogIn = (event) => {
         event.preventDefault()
-
-
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
@@ -25,8 +27,9 @@ const Login = () => {
             .then((result) => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-                toast.success("User login successfully!!");
                 // navigate(from)
+                toast.success("User login successfully!!");
+                navigate(from,{replace:true})
                 form.reset();
             })
             .catch((error) => {
@@ -45,7 +48,8 @@ const Login = () => {
             .then((result) => {
                 const loggedGoogleUser = result.user;
                 console.log(loggedGoogleUser)
-                toast.success('User Login Successfully!!')
+                toast.success('User Login Successfully!!');
+                navigate(from,{replace:true})
             })
             .catch((error) => {
                 console.error(error.message);
@@ -121,14 +125,14 @@ const Login = () => {
                 <div className="flex justify-end p-6 -mt-5">
                     <button
                         type="submit"
-                        className="btn border-0 inline-flex items-center justify-center w-full h-10 gap-2 px-5 text-sm font-medium tracking-wide text-white transition duration-300 rounded focus-visible:outline-none whitespace-nowrap bg-purple-700 disabled:cursor-not-allowed disabled:borde"
+                        className="btn border-0 inline-flex items-center justify-center w-full h-10 gap-2 px-5 text-sm font-medium tracking-wide text-white transition duration-300 rounded focus-visible:outline-none whitespace-nowrap bg-[#ff6e13] opacity-75 disabled:cursor-not-allowed disabled:borde"
                     >
                         <span>Login</span>
                     </button>
                 </div>
                 <div className="-mt-1 text-center text-md transition text-slate-400 peer-invalid:text-pink-500">
                     Create New Account
-                    <Link className="ml-1 text-purple-700 font-semibold" to="/register">
+                    <Link className="ml-1 text-[#ff6e13] font-semibold" to="/register">
                         Register
                     </Link>
                 </div>

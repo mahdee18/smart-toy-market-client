@@ -32,6 +32,7 @@ const AuthProvider = ({ children }) => {
     };
 
     const googleSignIn = () => {
+        setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
     const logOut = () => {
@@ -39,15 +40,15 @@ const AuthProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser);
-            setLoading(false);
-            // stop obserbing while unmounting
-            return () => {
-                return unsubsribe();
-            };
+        const unsubscribe = onAuthStateChanged(auth, loggedUser => {
+            console.log("logged User", loggedUser)
+            setLoading(false)
+            setUser(loggedUser)
         })
-    }, [])
+        return () => {
+            return unsubscribe()
+        }
+    }, []);
     const authInfo = {
         user,
         loading,

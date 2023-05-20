@@ -9,12 +9,13 @@ import Register from "../pages/Register/Register";
 import ProductDetails from "../pages/Shared/ProductDetails/ProductDetails";
 import AllToys from "../pages/AllToys/AllToys";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
-        errorElement:<NotFoundPage></NotFoundPage>,
+        errorElement: <NotFoundPage></NotFoundPage>,
         children: [
             {
                 path: '/',
@@ -40,12 +41,12 @@ const router = createBrowserRouter([
             },
             {
                 path: "categories/:id",
-                element: <ProductDetails></ProductDetails>,
+                element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:4000/alltoys/${params.id}`)
             },
             {
                 path: "/alltoys/:id",
-                element: <ProductDetails></ProductDetails>,
+                element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:4000/alltoys/${params.id}`)
             },
         ]

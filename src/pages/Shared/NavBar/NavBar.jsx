@@ -4,23 +4,31 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 import { toast } from 'react-toastify';
 
 const Navbar = () => {
-    const { user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext);
+
     const handleLogOut = () => {
         logOut()
             .then(() => {
-                toast.success('User LogOut Successfully!')
+                
             })
             .catch((error) => {
-                toast.error(error.message)
-            })
+                toast.error(error.message);
+            });
+    };
 
-    }
     const navItem = (
         <>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/allToys'>All Toys</Link></li>
-            <li><Link to='/login'>Login</Link></li>
-            <li><Link to='/blogs'>Blogs</Link></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/allToys">All Toys</Link></li>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/blogs">Blogs</Link></li>
+        </>
+    );
+
+    const conditionalNavItem = (
+        <>
+            <li><Link to="/myToys">My Toys</Link></li>
+            <li><Link to="/addAtoy">Add A Toy</Link></li>
         </>
     );
 
@@ -36,6 +44,8 @@ const Navbar = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             {navItem}
+
+                            {user && conditionalNavItem}
                         </ul>
                     </div>
                     <div className="flex flex-col items-center ml-2v">
@@ -46,6 +56,7 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {navItem}
+                        {user && conditionalNavItem}
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -60,19 +71,18 @@ const Navbar = () => {
                                 />
                                 <button
                                     onClick={handleLogOut}
-                                    className="btn border-0 text-white bg-purple-700 px-4 py-2 font-bold rounded-md flex items-center gap-1"
+                                    className="btn border-0 text-white bg-[#ff6e13] opacity-75 px-4 py-2 font-bold rounded-md flex items-center gap-1"
                                 >
                                     Logout
                                 </button>
                             </div>
                         ) : (
                             <Link to="/login">
-                                <button className="btn border-0 text-white bg-purple-700 px-4 py-2 font-bold rounded-md flex items-center gap-1">
+                                <button className="btn border-0 text-white bg-[#ff6e13] opacity-75 px-4 py-2 font-bold rounded-md flex items-center gap-1">
                                     Login
                                 </button>
                             </Link>
                         )}
-
                     </div>
                 </div>
             </div>

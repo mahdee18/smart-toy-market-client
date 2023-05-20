@@ -25,8 +25,8 @@ const Category = () => {
           {categories.map((category) => (
             <Tab
               key={category}
-              className="px-4 py-2 mb-3 sm:mt-12 sm:mb-6 bg-gray-200 mr-2 rounded-md cursor-pointer"
-              selectedClassName="bg-gray-500 text-white"
+              className="px-4 py-2 mb-3 sm:mt-12 sm:mb-6  font-semibold mr-2 rounded-md cursor-pointer"
+              selectedClassName="bg-[#ff6e13] opacity-75 text-white"
             >
               {category}
             </Tab>
@@ -45,7 +45,7 @@ const Category = () => {
                     <p className="text-gray-600">{toy.price}</p>
                     <p className="text-gray-600">Rating: {toy.rating}</p>
                     <Link to={`/categories/${toy._id}`}>
-                      <button className="bg-gray-500 text-white px-4 py-2 rounded-md mt-4">View Details</button>
+                      <button className="bg-[#ff6e13] opacity-75 text-white px-4 py-2 rounded-md mt-4">View Details</button>
                     </Link>
                   </div>
                 ))}

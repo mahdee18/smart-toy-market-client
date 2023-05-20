@@ -6,7 +6,7 @@ const ProductDetails = () => {
     console.log(toy)
     return (
         <div>
-            
+            <h2>This is product details</h2>
         </div>
     );
 };

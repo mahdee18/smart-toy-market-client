@@ -4,7 +4,7 @@ import Toys from '../Toys/Toys';
 
 const AllToys = () => {
     const allToys = useLoaderData();
-    const [limit, setLimit] = useState(5);
+    const [limit, setLimit] = useState(20);
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredToys, setFilteredToys] = useState([]);
 
@@ -21,7 +21,7 @@ const AllToys = () => {
     };
 
     const handleLimitChange = (event) => {
-        setLimit(parseInt(event.target.value, 10));
+        setLimit(parseInt(event.target.value, 20));
     };
 
     const displayedToys = filteredToys.slice(0, limit);
@@ -43,7 +43,7 @@ const AllToys = () => {
             <h1 className="text-4xl">Your bookings {displayedToys.length}</h1>
             <div className="overflow-x-auto w-full">
 
-                <div className="mt-4">
+                <div className="mt-4 text-center">
                     <input
                         type="text"
                         placeholder="Search by Toy Name"
@@ -52,7 +52,7 @@ const AllToys = () => {
                         onChange={handleSearch}
                     />
                 </div>
-                <div className="mt-4">
+                <div className="my-4 text-right">
                     <label htmlFor="limitSelect" className="mr-2">
                         Show:
                     </label>
@@ -71,13 +71,13 @@ const AllToys = () => {
 
                 <table className="table w-full">
                     <thead>
-                        <tr>
+                        <tr className='text-center'>
                             <th>Image</th>
                             <th>Seller</th>
-                            <th>Name</th>
-                            <th>Quantity</th>
+                            <th>Toy Name</th>
+                            <th>Sub Category</th>
                             <th>Price</th>
-                            <th>Ratings</th>
+                            <th>Quantity</th>
                             <th></th>
                         </tr>
                     </thead>
