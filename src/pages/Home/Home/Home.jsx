@@ -1,9 +1,12 @@
 import React from 'react';
+import GallerySection from '../GallerySection/GallerySection';
+import Category from '../Category/Category';
 
 const Home = () => {
     return (
         <div>
-            This is home!!
+            <GallerySection></GallerySection>
+            <Category></Category>
         </div>
     );
 };

@@ -38,9 +38,9 @@ const Navbar = () => {
                             {navItem}
                         </ul>
                     </div>
-                    <div className="flex items-center ml-2">
-                        <img src="https://netl.doe.gov/sites/default/files/inline-images/SMART%20Logo_official_rgb.png" className="w-16 h-16 lg:w-2/5 lg:h-24" alt="" />
-                        <a className="btn btn-ghost normal-case font-semibold text-2xl lg:text-4xl">Toy Market</a>
+                    <div className="flex flex-col items-center ml-2v">
+                        <img src="https://netl.doe.gov/sites/default/files/inline-images/SMART%20Logo_official_rgb.png" className="w-16 h-16 lg:w-24 lg:h-18" alt="" />
+                        <span className=" text-gray-500 bg-white font-semibold text-xl">Toy Market</span>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
