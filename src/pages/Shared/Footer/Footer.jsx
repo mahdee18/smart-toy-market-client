@@ -30,7 +30,7 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </div>
             </footer>
-            <footer className="footer items-center p-4 bg-neutral text-neutral-content">
+            <footer className="footer items-center p-4 text-neutral-content bg-[#ff6e13]">
                 <div className="items-center grid-flow-col">
                     <p>Copyright © 2023 - All right reserved</p>
                 </div>
