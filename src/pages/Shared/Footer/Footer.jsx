@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-base-200 text-base-content">
+            <footer className="footer mt-12 p-10 bg-base-200 text-base-content">
                 <div>
                     <img src="https://netl.doe.gov/sites/default/files/inline-images/SMART%20Logo_official_rgb.png" className='w-2/5 h-24' alt="" />
                     <p className='text-2xl font-bold'>Smart Toy Market</p>
