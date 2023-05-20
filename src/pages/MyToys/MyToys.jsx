@@ -1,9 +1,124 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
+import MyToy from './MyToy/MyToy';
+import Swal from 'sweetalert2';
 
 const MyToys = () => {
+    const [allToys, setAllToys] = useState([])
+
+    const [limit, setLimit] = useState(20);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [filteredToys, setFilteredToys] = useState([]);
+
+    useEffect(() => {
+        const updatedFilteredToys = allToys.filter((toy) => {
+            const name = toy.name || ''; // Provide a default empty string if the toyName property is undefined
+            return name.toLowerCase().includes(searchTerm.toLowerCase());
+        });
+        setFilteredToys(updatedFilteredToys);
+    }, [allToys, searchTerm]);
+
+    const handleSearch = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const handleLimitChange = (event) => {
+        setLimit(parseInt(event.target.value, 20));
+    };
+
+    const displayedToys = filteredToys.slice(0, limit);
+
+
+    const { user } = useContext(AuthContext)
+    console.log(user)
+    useEffect(() => {
+        fetch(`http://localhost:4000/mytoys?email=${user?.email}`)
+            .then(res => res.json())
+            .then(data => {
+                setAllToys(data)
+            })
+    }, [])
+    const handleDelete = _id => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:4000/myToys/${_id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            const remaining = allToys.filter(toy=>toy._id !==_id)
+                            setAllToys(remaining)
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Toy deleted successfully!',
+                                'success'
+                            )
+                        }
+                    })
+            }
+        })
+    }
     return (
         <div>
-            
+            <h1 className="text-4xl">Your bookings {displayedToys.length}</h1>
+            <div className="overflow-x-auto w-full">
+
+                <div className="mt-4 text-center">
+                    <input
+                        type="text"
+                        placeholder="Search by Toy Name"
+                        className="border rounded px-4 py-2"
+                        value={searchTerm}
+                        onChange={handleSearch}
+                    />
+                </div>
+                <div className="my-4 text-right">
+                    <label htmlFor="limitSelect" className="mr-2">
+                        Show:
+                    </label>
+                    <select
+                        id="limitSelect"
+                        className="border rounded px-4 py-2"
+                        value={limit}
+                        onChange={handleLimitChange}
+                    >
+                        <option value={5}>5</option>
+                        <option value={20}>20</option>
+                        <option value={30}>30</option>
+                        <option value={50}>50</option>
+                    </select>
+                </div>
+
+                <table className="table w-full">
+                    <thead>
+                        <tr className='text-center'>
+                            <th></th>
+                            <th>Image</th>
+                            <th>Seller</th>
+                            <th>Toy Name</th>
+                            <th>Sub Category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {displayedToys.map((toy) => (
+                            <MyToy handleDelete={handleDelete} key={toy._id} toy={toy} />
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };
