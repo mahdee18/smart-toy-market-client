@@ -2,8 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import MyToy from './MyToy/MyToy';
 import Swal from 'sweetalert2';
+import useTitle from '../../Hook/useTitle';
 
 const MyToys = () => {
+    useTitle('My Toys')
     const [allToys, setAllToys] = useState([])
 
     const [limit, setLimit] = useState(20);

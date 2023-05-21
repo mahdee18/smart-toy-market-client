@@ -1,41 +1,43 @@
 import React from 'react';
 import Swal from 'sweetalert2'
+import useTitle from '../../Hook/useTitle';
 
-const handleAddToy = event => {
-    event.preventDefault();
-    const form = event.target;
-    const name = form.toyName.value;
-    const picture = form.pictureURL.value;
-    const seller = form.sellerName.value;
-    const email = form.sellerEmail.value;
-    const category = form.subCategory.value;
-    const price = form.price.value;
-    const rating = form.rating.value;
-    const quantity = form.quantity.value;
-    const description = form.details.value;
-    const toyData = { category, picture, name, price, rating, quantity, seller, description, email }
-
-    fetch('https://smart-toy-market-server.vercel.app/alltoys', {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(toyData)
-    })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            if (data.acknowledged == true) {
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Toy Added successfully!!',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                })
-            }
-        })
-}
 const AddAtoys = () => {
+    useTitle('Add A Toys')
+    const handleAddToy = event => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.toyName.value;
+        const picture = form.pictureURL.value;
+        const seller = form.sellerName.value;
+        const email = form.sellerEmail.value;
+        const category = form.subCategory.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const quantity = form.quantity.value;
+        const description = form.details.value;
+        const toyData = { category, picture, name, price, rating, quantity, seller, description, email }
+    
+        fetch('https://smart-toy-market-server.vercel.app/alltoys', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(toyData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged == true) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Toy Added successfully!!',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
+    }
     return (
         <form onSubmit={handleAddToy} className="max-w-[750px] mx-auto overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-400">
             {/* Body*/}

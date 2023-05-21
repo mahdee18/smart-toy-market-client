@@ -5,8 +5,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import "react-toastify/dist/ReactToastify.css";
+import useTitle from '../../Hook/useTitle';
 
 const Register = () => {
+    useTitle('Register')
     const { createUser,googleSignIn } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false);
 
