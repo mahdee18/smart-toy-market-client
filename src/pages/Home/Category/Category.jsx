@@ -45,7 +45,7 @@ const Category = () => {
                   <div key={toy.id} className="bg-white p-4 rounded-md shadow-md">
                     <img src={toy.picture} alt={toy.name} className="w-full h-[250px]" />
                     <h3 className="text-lg font-bold mt-2">{toy.name}</h3>
-                    <p className="text-gray-600">{toy.price}</p>
+                    <p className="text-gray-600">${toy.price}</p>
                     <p className="text-gray-600">Rating: {toy.rating}</p>
                     {user ?
                       <Link to={`/categories/${toy._id}`}>

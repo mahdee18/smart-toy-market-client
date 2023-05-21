@@ -20,7 +20,6 @@ const Navbar = () => {
         <>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/allToys">All Toys</Link></li>
-            <li><Link to="/login">Login</Link></li>
             <li><Link to="/blogs">Blogs</Link></li>
         </>
     );
@@ -48,9 +47,9 @@ const Navbar = () => {
                             {user && conditionalNavItem}
                         </ul>
                     </div>
-                    <div className="flex flex-col items-center ml-2v">
-                        <img src="https://netl.doe.gov/sites/default/files/inline-images/SMART%20Logo_official_rgb.png" className="w-16 h-16 lg:w-24 lg:h-18" alt="" />
-                        <span className=" text-gray-500 bg-white font-semibold text-xl">Toy Market</span>
+                    <div className="flex md:flex-col items-center ml-2v">
+                        <img src="https://cdn11.bigcommerce.com/s-sl6fnsa/product_images/uploaded_images/stm-logo.png" className="w-16 h-16 lg:w-24 lg:h-18" alt="" />
+                        <span className=" text-gray-500 bg-white font-semibold text-xl">Smart Toy Market</span>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">

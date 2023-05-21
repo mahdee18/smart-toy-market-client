@@ -12,7 +12,7 @@ const ProductDetails = () => {
                 <h1 className="text-2xl font-bold  text-gray-800">{name}</h1>
                 <div className="text-gray-500 text-lg mt-2">
                     <p className=" mt-2"><strong>Category:</strong> {category}</p>
-                    <p className="py-2"><strong>Price:</strong> {price}</p>
+                    <p className="py-2"><strong>Price:</strong> ${price}</p>
                     <p className=""><strong>Rating:</strong> {rating}</p>
                     <p className="py-2"><strong>Quantity: </strong>{quantity}</p>
                     <p className=""><strong>Seller: </strong>{seller}</p>
