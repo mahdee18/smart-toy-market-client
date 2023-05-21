@@ -12,7 +12,7 @@ const AllToys = () => {
 
     useEffect(() => {
         const updatedFilteredToys = allToys.filter((toy) => {
-            const name = toy.name || ''; // Provide a default empty string if the toyName property is undefined
+            const name = toy.name || '';
             return name.toLowerCase().includes(searchTerm.toLowerCase());
         });
         setFilteredToys(updatedFilteredToys);
@@ -27,17 +27,6 @@ const AllToys = () => {
     };
 
     const displayedToys = filteredToys.slice(0, limit);
-
-    const handleViewDetails = (toyId) => {
-        if (!isLoggedIn) {
-            // Redirect to login page
-            // window.location.href = '/login';
-        } else {
-            // Redirect to toy details page
-            // window.location.href = `/toys/${toyId}`;
-        }
-    };
-
 
     return (
 
@@ -84,7 +73,7 @@ const AllToys = () => {
                     </thead>
                     <tbody>
                         {displayedToys.map((toy) => (
-                            <Toys key={toy._id} toy={toy} handleViewDetails={handleViewDetails} />
+                            <Toys key={toy._id} toy={toy}/>
                         ))}
                     </tbody>
                 </table>

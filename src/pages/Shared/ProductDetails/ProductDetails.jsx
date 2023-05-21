@@ -6,7 +6,7 @@ const ProductDetails = () => {
     const { category, picture, name, price, rating, quantity, seller, description, email } = toy
     console.log(toy)
     return (
-        <div className=" mx-auto bg-white rounded-lg shadow-md overflow-hidden w-full flex items-center">
+        <div className=" mt-10 mx-auto bg-white rounded-lg shadow-md overflow-hidden w-full flex items-center">
             <img className="w-1/2 object-cover" src={picture} alt={name} />
             <div className="px-4 py-4 w-1/2">
                 <h1 className="text-2xl font-bold  text-gray-800">{name}</h1>
@@ -16,8 +16,8 @@ const ProductDetails = () => {
                     <p className=""><strong>Rating:</strong> {rating}</p>
                     <p className="py-2"><strong>Quantity: </strong>{quantity}</p>
                     <p className=""><strong>Seller: </strong>{seller}</p>
-                    <p className="py-2"><strong>Description:</strong> {description}</p>
-                    <p className=""><strong>Email: </strong>{email}</p>
+                    <p className="py-2"><strong>Email: </strong>{email}</p>
+                    <p className=""><strong>Description:</strong> {description}</p>
                 </div>
             </div>
         </div>

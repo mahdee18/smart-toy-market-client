@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Toys = ({ toy }) => {
     
-    const { _id, seller, category, price, rating, name, quantity, picture } = toy;
-    console.log(toy)
+    const { _id, seller, category, price, name, quantity, picture } = toy;
     return (
         <tr className='text-center'>
 
