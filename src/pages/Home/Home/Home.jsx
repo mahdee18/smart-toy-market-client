@@ -4,7 +4,7 @@ import Category from '../Category/Category';
 import Banner from '../Banner/Banner';
 import useTitle from '../../../Hook/useTitle';
 import Testimonials from '../Testimonials/Testimonials';
-import NewsletterSubscription from '../../SubscribeNewsLetter/NewsletterSubscription';
+import NewsletterSubscription from '../../Discount/Discount';
 
 const Home = () => {
     useTitle('Home')
