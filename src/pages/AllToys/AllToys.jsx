@@ -42,7 +42,6 @@ const AllToys = () => {
     return (
 
         <div>
-            <h1 className="text-4xl">Your bookings {displayedToys.length}</h1>
             <div className="overflow-x-auto w-full">
 
                 <div className="mt-4 text-center">

@@ -58,7 +58,7 @@ const MyToys = () => {
                     .then(data => {
                         console.log(data)
                         if (data.deletedCount > 0) {
-                            const remaining = allToys.filter(toy=>toy._id !==_id)
+                            const remaining = allToys.filter(toy => toy._id !== _id)
                             setAllToys(remaining)
                             Swal.fire(
                                 'Deleted!',
@@ -72,7 +72,6 @@ const MyToys = () => {
     }
     return (
         <div>
-            <h1 className="text-4xl">Your bookings {displayedToys.length}</h1>
             <div className="overflow-x-auto w-full">
 
                 <div className="mt-4 text-center">

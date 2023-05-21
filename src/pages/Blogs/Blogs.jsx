@@ -6,7 +6,9 @@ const Blogs = () => {
     return (
         <div>
             <div>
+
                 <div className='p-12 text-center'>
+
                     <h1 className='py-12 text-4xl font-sans'>Here are the 4 questions answer!</h1>
                     <div tabIndex={0} className="mx-auto collapse collapse-arrow border border-base-300 bg-base-100 rounded-box sm:w-1/2 lg:w-2/3 my-8">
                         <div className="collapse-title text-xl font-medium bg-[#ff6e13] opacity-75 text-white">
@@ -62,7 +64,7 @@ const Blogs = () => {
                         </div>
                     </div>
                     <div tabIndex={0} className="mx-auto collapse collapse-arrow border border-base-300 bg-base-100 rounded-box sm:w-1/2 lg:w-2/3 my-5">
-                        <div className="collapse-title text-xl font-medium b[#ff6e13]g- opacity-75 text-white">
+                        <div className="collapse-title text-xl font-medium bg-[#ff6e13] opacity-75 text-white">
                             4.What is MongoDB aggregate and how does it work?
                         </div>
                         <div className="collapse-content text-sm sm:text-base ">
