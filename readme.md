@@ -16,6 +16,6 @@
 * Private Route: Its doesn't allow unauthorize user to access the Product details page  .
 
 # Website Link  
-## [Smart-Toy-Mart](https://smarttoymarket.web.app/)
+## [Smart-Toy-Market](https://smarttoymarket.web.app/)
 
 Check out our [website](https://smarttoymarket.web.app/) 
