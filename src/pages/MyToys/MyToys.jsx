@@ -32,7 +32,7 @@ const MyToys = () => {
     const { user } = useContext(AuthContext)
     console.log(user)
     useEffect(() => {
-        fetch(`http://localhost:4000/mytoys?email=${user?.email}`)
+        fetch(`https://smart-toy-market-server.vercel.app/mytoys?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setAllToys(data)
@@ -49,7 +49,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:4000/myToys/${_id}`, {
+                fetch(`https://smart-toy-market-server.vercel.app/myToys/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
