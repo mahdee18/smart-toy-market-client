@@ -5,7 +5,7 @@ const Footer = () => {
         <div>
             <footer className="footer mt-12 p-10 bg-base-200 text-base-content">
                 <div>
-                    <img src="https://netl.doe.gov/sites/default/files/inline-images/SMART%20Logo_official_rgb.png" className='w-2/5 h-24' alt="" />
+                    <img src="https://cdn11.bigcommerce.com/s-sl6fnsa/product_images/uploaded_images/stm-logo.png" className='w-2/5 h-24' alt="" />
                     <p className='text-2xl font-bold'>Smart Toy Market</p>
                     <p className='text-lg'>Address: 123 Main Street, Astoria Springs, NY, USA</p>
                 </div>
