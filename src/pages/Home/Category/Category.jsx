@@ -10,7 +10,7 @@ const Category = () => {
   const { user } = useContext(AuthContext)
   const [activeCategory, setActiveCategory] = useState('');
 
-  // Get unique categories
+
   const categories = ['All', ...new Set(toys.map((toy) => toy.category))];
 
   const handleTabSelect = (index) => {
@@ -50,7 +50,7 @@ const Category = () => {
                     {user ?
                       <Link to={`/categories/${toy._id}`}>
                         <button className="bg-[#ff6e13] opacity-75 text-white px-4 py-2 rounded-md mt-4">View Details</button>
-                      </Link> :
+                      </Link> :           
                       (
                         <Link className="" to={`/categories/${toy._id}`}>
                           <button
