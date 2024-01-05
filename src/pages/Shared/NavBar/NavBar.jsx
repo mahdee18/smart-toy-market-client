@@ -33,7 +33,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 w-[80%] mx-auto ">
                 <div className="navbar-start flex items-center">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -49,7 +49,6 @@ const Navbar = () => {
                     </div>
                     <div className="flex md:flex-col items-center ml-2v">
                         <img src="https://cdn11.bigcommerce.com/s-sl6fnsa/product_images/uploaded_images/stm-logo.png" className="w-16 h-16 lg:w-24 lg:h-18" alt="" />
-                        <span className=" text-gray-500 bg-white font-semibold text-xl">Smart Toy Market</span>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -58,7 +57,7 @@ const Navbar = () => {
                         {user && conditionalNavItem}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end mr-3">
                     <div>
                         {user ? (
                             <div className="flex items-center justify-center gap-6">
