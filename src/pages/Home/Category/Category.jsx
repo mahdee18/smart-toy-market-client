@@ -9,13 +9,13 @@ const Category = () => {
   const toys = useLoaderData();
   const { user } = useContext(AuthContext);
   const [activeCategory, setActiveCategory] = useState('');
-  const [displayedToys, setDisplayedToys] = useState(6); // Initial number of toys to display
+  const [displayedToys, setDisplayedToys] = useState(6); 
 
   const categories = ['All', ...new Set(toys.map((toy) => toy.category))];
 
   const handleTabSelect = (index) => {
     setActiveCategory(categories[index]);
-    setDisplayedToys(6); // Reset displayed toys when switching tabs
+    setDisplayedToys(6);
   };
 
   const handleViewMore = () => {
