@@ -5,6 +5,7 @@ import Banner from '../Banner/Banner';
 import useTitle from '../../../Hook/useTitle';
 import Testimonials from '../Testimonials/Testimonials';
 import NewsletterSubscription from '../../Discount/Discount';
+import CallToAction from '../CallToAction/CallToAction';
 
 const Home = () => {
     useTitle('Home')
@@ -15,6 +16,7 @@ const Home = () => {
             <Category></Category>
             <Testimonials></Testimonials>
             <NewsletterSubscription></NewsletterSubscription>
+            <CallToAction></CallToAction>
         </div>
     );
 };
