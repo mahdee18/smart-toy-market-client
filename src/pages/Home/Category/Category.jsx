@@ -93,7 +93,7 @@ const Category = () => {
             {toys.length > displayedToys && (
               <div className="text-center mt-4">
                 <button
-                  className="bg-[#ff6e13] opacity-75 text-white px-4 py-2 rounded-md"
+                  className="bg-[#ff6e13] hover:bg-indigo-500 opacity-75 text-white px-4 py-2 rounded-md"
                   onClick={handleViewMore}
                 >
                   View More
