@@ -6,6 +6,7 @@ import useTitle from '../../../Hook/useTitle';
 import Testimonials from '../Testimonials/Testimonials';
 import NewsletterSubscription from '../../Discount/Discount';
 import CallToAction from '../CallToAction/CallToAction';
+import ParralaxBanner from '../ParralaxBanner/ParralaxBanner';
 
 const Home = () => {
     useTitle('Home')
@@ -14,6 +15,7 @@ const Home = () => {
             <Banner></Banner>
             <GallerySection></GallerySection>
             <Category></Category>
+            <ParralaxBanner></ParralaxBanner>
             <Testimonials></Testimonials>
             <NewsletterSubscription></NewsletterSubscription>
             <CallToAction></CallToAction>
