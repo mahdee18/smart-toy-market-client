@@ -8,6 +8,7 @@ import NewsletterSubscription from '../../Discount/Discount';
 import CallToAction from '../CallToAction/CallToAction';
 import ParralaxBanner from '../ParralaxBanner/ParralaxBanner';
 import Facilities from '../Facilities/Facilities';
+import NewsLetter from '../NewsLetter/NewsLetter';
 
 const Home = () => {
     useTitle('Home')
@@ -20,6 +21,7 @@ const Home = () => {
             <ParralaxBanner></ParralaxBanner>
             <Testimonials></Testimonials>
             <NewsletterSubscription></NewsletterSubscription>
+            <NewsLetter></NewsLetter>
             <CallToAction></CallToAction>
         </div>
     );
