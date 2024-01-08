@@ -12,13 +12,13 @@ const Banner = () => {
           <Fade direction='left' triggerOnce>
             <h1 className="text-5xl font-semibold">
               Welcome to <br />
-              <span className='text-[#ff6e13] opacity-75 font-bold'>Smart Toy Market</span>
+              <span className='text-[#ff6e13] font-bold'>Smart Toy Market</span>
             </h1>
             <p className="py-6 text-gray-500">
               Explore our wide range of innovative and <br />
               educational toys for engineering, language learning, and more!
             </p>
-            <button className="btn btn-active bg-[#ff6e13] opacity-75 border-0 font-bold">Get Started</button>
+            <button className="btn btn-active bg-[#ff6e13] border-0 font-bold">Get Started</button>
           </Fade>
         </div>
       </div>

@@ -41,7 +41,7 @@ const Category = () => {
               <Tab
                 key={category}
                 className="px-4 py-2 mb-3 sm:mt-12 sm:mb-6 font-semibold mr-2 rounded-md cursor-pointer"
-                selectedClassName="bg-[#ff6e13] opacity-75 text-white"
+                selectedClassName="bg-[#ff6e13]  text-white"
               >
                 {category}
               </Tab>
@@ -63,14 +63,14 @@ const Category = () => {
                       <p className="text-gray-600">Rating: {toy.rating}</p>
                       {user ? (
                         <Link to={`/categories/${toy._id}`}>
-                          <button className="bg-[#ff6e13] opacity-75 text-white px-4 py-2 rounded-md mt-4">
+                          <button className="bg-[#ff6e13]  text-white px-4 py-2 rounded-md mt-4">
                             View Details
                           </button>
                         </Link>
                       ) : (
                         <Link className="" to={`/categories/${toy._id}`}>
                           <button
-                            className="rounded-lg border-0 opacity-75 text-white bg-[#ff6e13] px-5 py-2.5 mt-4 hover:bg-black"
+                            className="rounded-lg border-0  text-white bg-[#ff6e13] px-5 py-2.5 mt-4 hover:bg-black"
                             onClick={() => {
                               Swal.fire({
                                 position: "top-center",
@@ -93,7 +93,7 @@ const Category = () => {
             {toys.length > displayedToys && (
               <div className="text-center mt-4">
                 <button
-                  className="bg-[#ff6e13] hover:bg-indigo-500 opacity-75 text-white px-4 py-2 rounded-md"
+                  className="bg-[#ff6e13] hover:bg-indigo-500 text-white px-4 py-2 rounded-md"
                   onClick={handleViewMore}
                 >
                   View More
