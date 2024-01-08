@@ -9,7 +9,7 @@ const ParralaxBanner = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
                     <h2 className="text-xl font-semibold">BUY YOUR TOY FROM US</h2>
                     <h1 className="text-4xl font-bold my-5">CHOOSE YOUR BEST TOY FROM SAMRT TOY MARKET</h1>
-                    <Link to='/allclasses' className='btn bg-[#ff6e13] text-white hover:bg-indigo-500'>Get Start Now!</Link>
+                    <Link to='/allToys' className='btn bg-[#ff6e13] text-white hover:bg-indigo-500'>Get Start Now!</Link>
                 </div>
             </div>
         </section>
