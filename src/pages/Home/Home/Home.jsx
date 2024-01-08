@@ -21,8 +21,8 @@ const Home = () => {
             <ParralaxBanner></ParralaxBanner>
             <Testimonials></Testimonials>
             <NewsletterSubscription></NewsletterSubscription>
-            <NewsLetter></NewsLetter>
             <CallToAction></CallToAction>
+            <NewsLetter></NewsLetter>
         </div>
     );
 };
