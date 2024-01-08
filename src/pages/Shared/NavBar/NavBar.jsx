@@ -76,7 +76,7 @@ const Navbar = () => {
                             </div>
                         ) : (
                             <Link to="/login">
-                                <button className="btn border-0 text-white bg-[#ff6e13] opacity-75 px-4 py-2 font-bold rounded-md flex items-center gap-1">
+                                <button className="btn border-0 text-white bg-[#ff6e13] px-4 py-2 font-bold rounded-md flex items-center gap-1">
                                     Login
                                 </button>
                             </Link>

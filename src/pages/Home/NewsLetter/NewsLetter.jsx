@@ -1,6 +1,6 @@
  const NewsLetter = () => {
     return (
-        <section className="items-center mt-12 max-w-screen-full mx-auto px-4 gap-4 md:flex md:px-8 xl:gap-12 py-10 bg-[#8dc2d5]">
+        <section className="items-center mt-6 max-w-screen-full mx-auto px-4 gap-4 md:flex md:px-8 xl:gap-12 py-10 bg-[#8dc2d5]">
             <div className="flex-1 space-y-3 ">
                 <h3 className="text-3xl text-white font-bold lg:text-3xl">
                     Subscribe to our newsletter
@@ -26,7 +26,7 @@
                 </form>
                 <p className="mt-3 text-[15px] text-gray-200">
                     Product updates, announcements, and discounts.
-                    Read our <a className="text-indigo-600 underline" href="javascript:void(0)"> Privacy Policy </a>
+                    Read our <a className="text-[#ff6e13] underline" href="javascript:void(0)"> Privacy Policy </a>
                 </p>
             </div>
         </section>
