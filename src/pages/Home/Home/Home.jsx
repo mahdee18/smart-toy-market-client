@@ -7,6 +7,7 @@ import Testimonials from '../Testimonials/Testimonials';
 import NewsletterSubscription from '../../Discount/Discount';
 import CallToAction from '../CallToAction/CallToAction';
 import ParralaxBanner from '../ParralaxBanner/ParralaxBanner';
+import Facilities from '../Facilities/Facilities';
 
 const Home = () => {
     useTitle('Home')
@@ -14,6 +15,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <GallerySection></GallerySection>
+            <Facilities></Facilities>
             <Category></Category>
             <ParralaxBanner></ParralaxBanner>
             <Testimonials></Testimonials>
