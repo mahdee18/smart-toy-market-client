@@ -9,7 +9,7 @@ const Navbar = () => {
     const handleLogOut = () => {
         logOut()
             .then(() => {
-                
+
             })
             .catch((error) => {
                 toast.error(error.message);
@@ -48,7 +48,9 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex md:flex-col items-center ml-2v">
-                        <img src="https://cdn11.bigcommerce.com/s-sl6fnsa/product_images/uploaded_images/stm-logo.png" className="w-16 h-16 lg:w-24 lg:h-18" alt="" />
+                        <Link to={'/'}>
+                            <img src="https://cdn11.bigcommerce.com/s-sl6fnsa/product_images/uploaded_images/stm-logo.png" className="w-16 h-16 lg:w-24 lg:h-18" alt="" />
+                        </Link>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
