@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { FaGoogle } from 'react-icons/fa';
+import { FcGoogle } from "react-icons/fc";
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import { AuthContext } from '../../Providers/AuthProvider';
@@ -176,7 +176,7 @@ const Register = () => {
                 <div className="flex justify-end p-6 -mt-5">
                     <button
                         type="submit"
-                        className="btn border-0 inline-flex items-center justify-center w-full h-10 gap-2 px-5 text-sm font-medium tracking-wide text-white transition duration-300 rounded focus-visible:outline-none whitespace-nowrap bg-[#ff6e13] opacity-75 disabled:cursor-not-allowed disabled:border"
+                        className="btn border-0 inline-flex items-center justify-center w-full h-10 gap-2 px-5 text-sm font-medium tracking-wide text-white transition duration-300 rounded focus-visible:outline-none whitespace-nowrap bg-[#ff6e13] disabled:cursor-not-allowed disabled:border"
                     >
                         <span>Register</span>
                     </button>
@@ -193,7 +193,7 @@ const Register = () => {
                     <hr className="flex-1 border-t border-slate-400" />
                 </div>
                 <div onClick={handleWithGoogleSingUp} className="flex items-center justify-center gap-[6px] w-ful; mx-6 h-[50px] border border-slate-400 rounded-md cursor-pointer mb-6">
-                    <FaGoogle className="w-7 h-7 rounded-md"></FaGoogle>
+                    <FcGoogle className="w-7 h-7 rounded-md"></FcGoogle>
                     <span>Continue with Google</span>
                 </div>
 
