@@ -96,7 +96,7 @@ const Category = () => {
                   className="bg-[#ff6e13] hover:bg-indigo-500 text-white px-4 py-2 rounded-md"
                   onClick={handleViewMore}
                 >
-                  View More
+                  See More
                 </button>
               </div>
             )}

@@ -29,7 +29,7 @@ const Login = () => {
             .then((result) => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-                // navigate(from)
+                navigate(from)
                 toast.success("User login successfully!!");
                 navigate(from,{replace:true})
                 form.reset();
@@ -61,7 +61,6 @@ const Login = () => {
     return (
         <section className="max-w-7xl mx-auto px-4 py-12">
             <ToastContainer />
-            {/* Component: Card with form */}
             <form onSubmit={handleLogIn} className="max-w-[415px] mx-auto overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-400">
                 {/* Body*/}
                 <div className="p-6">
