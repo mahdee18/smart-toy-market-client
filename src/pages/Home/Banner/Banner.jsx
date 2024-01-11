@@ -10,11 +10,11 @@ const Banner = () => {
 
         <div className="absolute top-1/2 right-5 transform -translate-y-1/2 text-gray-500 text-center sm:text-right lg:text-center lg:max-w-lg lg:pr-10">
           <Fade direction='left' triggerOnce>
-            <h1 className="text-5xl font-semibold">
+            <h1 className="text-4xl lg:text-5xl font-semibold">
               Welcome to <br />
               <span className='text-[#ff6e13] font-bold'>Smart Toy Market</span>
             </h1>
-            <p className="py-6 text-gray-500">
+            <p className="py-6 text-gray-500 w-5/6 mx-auto">
               Explore our wide range of innovative and <br />
               educational toys for engineering, language learning, and more!
             </p>
