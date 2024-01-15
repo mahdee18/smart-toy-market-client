@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Fade } from "react-awesome-reveal";
 
 export const CarouselMain = () => {
     const [currentSlider, setCurrentSlider] = useState(0);
@@ -29,14 +30,17 @@ export const Carousel2 = () => {
     return (
         <div className="max-w-full mx-auto h-[540px] lg:h-[670px] px-3 lg:px-10 flex flex-col lg:flex-row items-center justify-center overflow-hidden gap-5 lg:gap-10 relative">
             <div className="bg-[#a7cedd] w-full absolute left-0 h-[540px] lg:h-[670px] -z-40"></div>
+
             <div className="w-2/3 lg:w-1/3 text-center lg:text-left space-y-2 lg:space-y-5 py-5">
-                <h1 className="text-4xl lg:text-5xl font-semibold">
-                    Welcome to <br />
-                    <span className='text-[#ff6e13] font-bold'>Smart Toy Market</span>
-                </h1>
-                <p className="text-[#616161] text-xs md:text-lg"> Explore our wide range of innovative and <br />
-                    educational toys for engineering, language learning, and more!</p>
-                <button className="font-bold py-2 xl:py-3 text-xs md:text-base lg:text-lg xl:text-xl hover:scale-95 duration-300 px-4 lg:px-10 text-white bg-[#ff6e13]">Explore More</button>
+                <Fade direction='left' triggerOnce>
+                    <h1 className="text-4xl lg:text-5xl font-semibold">
+                        Welcome to <br />
+                        <span className='text-[#ff6e13] font-bold'>Smart Toy Market</span>
+                    </h1>
+                    <p className="text-[#616161] text-xs md:text-lg"> Explore our wide range of innovative and <br />
+                        educational toys for engineering, language learning, and more!</p>
+                    <button className="font-bold py-2 xl:py-3 text-xs md:text-base lg:text-lg xl:text-xl hover:scale-95 duration-300 px-4 lg:px-10 text-white bg-[#ff6e13]">Explore More</button>
+                </Fade>
             </div>
             <CarouselMain />
         </div>
