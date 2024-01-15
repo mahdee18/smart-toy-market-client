@@ -37,7 +37,7 @@ export const Carousel2 = () => {
                         Welcome to <br />
                         <span className='text-[#ff6e13] font-bold'>Smart Toy Market</span>
                     </h1>
-                    <p className="text-[#616161] text-xs md:text-lg"> Explore our wide range of innovative and <br />
+                    <p className="text-[#616161] text-xs md:text-lg"> Explore our wide range of innovative and 
                         educational toys for engineering, language learning, and more!</p>
                     <button className="font-bold py-2 xl:py-3 text-xs md:text-base lg:text-lg xl:text-xl hover:scale-95 duration-300 px-4 lg:px-10 text-white bg-[#ff6e13]">Explore More</button>
                 </Fade>
