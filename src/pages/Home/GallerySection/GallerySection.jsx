@@ -16,7 +16,7 @@ const GallerySection = () => {
         
         'https://th.bing.com/th/id/OIP.GV_SJr7bISBeg_dpJdi0_AHaHa?pid=ImgDet&w=1000&h=1000&rs=1',
 
-        'https://i.ebayimg.com/images/g/VvUAAOSw7jtfCjxp/s-l640.jpg',
+        'https://th.bing.com/th/id/OIP.nK18zckqMCUjejfyTE8BYAHaHX?rs=1&pid=ImgDetMain',
         'https://th.bing.com/th/id/OIP.XQ-9FW5MPKc6ThpEQFuA5wHaHa?pid=ImgDet&rs=1'
     ];
 
