@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export const CarouselMain = () => {
     const [currentSlider, setCurrentSlider] = useState(0);
-    const sliders = [{ img: "https://i5.walmartimages.com/asr/b06f9009-4aa8-4bdd-8559-498b21971489_1.affe7ba283dbb15367933ad26c6c3d91.jpeg", tags: "Room", }, { img: "https://m.media-amazon.com/images/I/715pZyRnyeL._AC_SX569_.jpg", tags: "Room", }, { img: "https://th.bing.com/th/id/OIP.BBftAWLH_5FeTmZgQm8mUwHaHa?w=800&h=800&rs=1&pid=ImgDetMain", tags: "Room", }, { img: "https://source.unsplash.com/600x600/?livingroom", tags: "Room", }, { img: "https://source.unsplash.com/600x600/?bedrooms", tags: "Room", },];
+    const sliders = [{ img: "https://i5.walmartimages.com/asr/b06f9009-4aa8-4bdd-8559-498b21971489_1.affe7ba283dbb15367933ad26c6c3d91.jpeg", tags: "Room", }, { img: "https://th.bing.com/th/id/OIP.BBftAWLH_5FeTmZgQm8mUwHaHa?w=800&h=800&rs=1&pid=ImgDetMain", tags: "Room", }, { img: "https://m.media-amazon.com/images/I/715pZyRnyeL._AC_SX569_.jpg", tags: "Room", }, { img: "https://th.bing.com/th/id/OIP.UVj71BrUO93IXor4uRvGygHaHa?rs=1&pid=ImgDetMain", tags: "Room", }, { img: "https://m.media-amazon.com/images/I/91nO8S2XFPL._AC_SL1500_.jpg", tags: "Room", },];
     const nextSlider = () => setCurrentSlider((currentSlider) => (currentSlider === sliders.length - 1 ? 0 : currentSlider + 1));
     return (
         <div className="sm:w-2/3 h-[540px] md:h-[670px] flex items-center relative overflow-hidden">
@@ -28,7 +28,7 @@ export const CarouselMain = () => {
 export const Carousel2 = () => {
     return (
         <div className="max-w-full mx-auto h-[540px] lg:h-[670px] px-3 lg:px-10 flex flex-col lg:flex-row items-center justify-center overflow-hidden gap-5 lg:gap-10 relative">
-            <div className="bg-gray-300 w-full absolute left-0 h-[540px] lg:h-[670px] -z-40"></div>
+            <div className="bg-[#a7cedd] w-full absolute left-0 h-[540px] lg:h-[670px] -z-40"></div>
             <div className="w-2/3 lg:w-1/3 text-center lg:text-left space-y-2 lg:space-y-5 py-5">
                 <h1 className="text-4xl lg:text-5xl font-semibold">
                     Welcome to <br />
