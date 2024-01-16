@@ -1,10 +1,10 @@
 import { useContext, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { AuthContext } from '../../../Providers/AuthProvider';
-import Swal from 'sweetalert2';
 import { Fade } from 'react-awesome-reveal';
+import Card9 from './Card9';
 
 const Category = () => {
   const toys = useLoaderData();
@@ -56,36 +56,38 @@ const Category = () => {
                   .filter((toy) => category === 'All' || toy.category === category)
                   .slice(0, displayedToys)
                   .map((toy) => (
-                    <div key={toy.id} className="bg-white p-4 rounded-md shadow-md">
-                      <img src={toy.picture} alt={toy.name} className="w-full h-[250px]" />
-                      <h3 className="text-lg font-bold mt-2">{toy.name}</h3>
-                      <p className="text-gray-600">${toy.price}</p>
-                      <p className="text-gray-600">Rating: {toy.rating}</p>
-                      {user ? (
-                        <Link to={`/categories/${toy._id}`}>
-                          <button className="bg-[#ff6e13]  text-white px-4 py-2 rounded-md mt-4">
-                            View Details
-                          </button>
-                        </Link>
-                      ) : (
-                        <Link className="" to={`/categories/${toy._id}`}>
-                          <button
-                            className="rounded-lg border-0  text-white bg-[#ff6e13] px-5 py-2.5 mt-4 hover:bg-black"
-                            onClick={() => {
-                              Swal.fire({
-                                position: "top-center",
-                                icon: "error",
-                                title: "Please login first",
-                                showConfirmButton: false,
-                                timer: 3000,
-                              });
-                            }}
-                          >
-                            View Details
-                          </button>
-                        </Link>
-                      )}
-                    </div>
+                    // <div key={toy.id} className="bg-white p-4 rounded-md shadow-md">
+                    //   <img src={toy.picture} alt={toy.name} className="w-full h-[250px]" />
+                    //   <h3 className="text-lg font-bold mt-2">{toy.name}</h3>
+                    //   <p className="text-gray-600">${toy.price}</p>
+                    //   <p className="text-gray-600">Rating: {toy.rating}</p>
+                    //   {user ? (
+                    //     <Link to={`/categories/${toy._id}`}>
+                    //       <button className="bg-[#ff6e13]  text-white px-4 py-2 rounded-md mt-4">
+                    //         View Details
+                    //       </button>
+                    //     </Link>
+                    //   ) : (
+                    //     <Link className="" to={`/categories/${toy._id}`}>
+                    //       <button
+                    //         className="rounded-lg border-0  text-white bg-[#ff6e13] px-5 py-2.5 mt-4 hover:bg-black"
+                    //         onClick={() => {
+                    //           Swal.fire({
+                    //             position: "top-center",
+                    //             icon: "error",
+                    //             title: "Please login first",
+                    //             showConfirmButton: false,
+                    //             timer: 3000,
+                    //           });
+                    //         }}
+                    //       >
+                    //         View Details
+                    //       </button>
+                    //     </Link>
+                    //   )}
+                    // </div>
+
+                    <Card9 toy={toy}></Card9>
                   ))}
               </div>
             </Fade>
