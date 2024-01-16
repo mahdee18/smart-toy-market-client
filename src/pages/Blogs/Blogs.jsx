@@ -11,7 +11,7 @@ const Blogs = () => {
 
                     <h1 className='py-12 text-4xl font-sans'>Here are the 4 questions answer!</h1>
                     <div tabIndex={0} className="mx-auto collapse collapse-arrow border border-base-300 bg-base-100 rounded-box sm:w-1/2 lg:w-2/3 my-8">
-                        <div className="collapse-title text-xl font-medium bg-[#ff6e13] opacity-75 text-white">
+                        <div className="collapse-title text-xl font-medium bg-[#ff6e13]  text-white">
                             1.What is an access token and refresh token? How do they work and where should we store them on the client-side?
                         </div>
                         <div className="collapse-content text-sm sm:text-base ">
@@ -27,7 +27,7 @@ const Blogs = () => {
                         </div>
                     </div>
                     <div tabIndex={0} className="mx-auto collapse collapse-arrow border border-base-300 bg-base-100 rounded-box sm:w-1/2 lg:w-2/3 my-5">
-                        <div className="collapse-title text-xl font-medium bg-[#ff6e13] opacity-75 text-white">
+                        <div className="collapse-title text-xl font-medium bg-[#ff6e13]  text-white">
                             2.Compare SQL and NoSQL databases?
                         </div>
                         <div className="collapse-content text-sm sm:text-base ">
@@ -51,7 +51,7 @@ const Blogs = () => {
                         </div>
                     </div>
                     <div tabIndex={0} className="mx-auto collapse collapse-arrow border border-base-300 bg-base-100 rounded-box sm:w-1/2 lg:w-2/3 my-5">
-                        <div className="collapse-title text-xl font-medium bg-[#ff6e13] opacity-75 text-white">
+                        <div className="collapse-title text-xl font-medium bg-[#ff6e13]  text-white">
                             3.What is express js? What is Nest JS?
                         </div>
                         <div className="collapse-content text-sm sm:text-base ">
@@ -64,7 +64,7 @@ const Blogs = () => {
                         </div>
                     </div>
                     <div tabIndex={0} className="mx-auto collapse collapse-arrow border border-base-300 bg-base-100 rounded-box sm:w-1/2 lg:w-2/3 my-5">
-                        <div className="collapse-title text-xl font-medium bg-[#ff6e13] opacity-75 text-white">
+                        <div className="collapse-title text-xl font-medium bg-[#ff6e13]  text-white">
                             4.What is MongoDB aggregate and how does it work?
                         </div>
                         <div className="collapse-content text-sm sm:text-base ">
