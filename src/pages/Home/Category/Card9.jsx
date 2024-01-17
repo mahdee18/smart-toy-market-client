@@ -3,8 +3,7 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const Card9 = ({toy}) => {
-    
+const Card9 = ({toy}) => { 
   const { user } = useContext(AuthContext);
     return (
             <div className="max-[350px] md:w-[350px] bg-slate-300/20 px-6 py-4 mx-auto rounded-2xl space-y-6 shadow-md">
