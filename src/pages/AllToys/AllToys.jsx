@@ -34,6 +34,7 @@ const AllToys = () => {
             <div className="overflow-x-auto w-full">
 
                 <div className="mt-4 text-center">
+                    <span className='font-bold mx-2 text-lg text-[#ff6e13]'>Search Toy</span>
                     <input
                         type="text"
                         placeholder="Search by Toy Name"

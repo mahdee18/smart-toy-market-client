@@ -10,7 +10,7 @@ const MyToy = ({ toy, handleDelete}) => {
     return (
         <tr className='text-center'>
             <td>
-                <button onClick={() => handleDelete(_id)} className="btn btn-circle btn-primary bg-[#ff6e13] opacity-75 border-0">
+                <button onClick={() => handleDelete(_id)} className="btn btn-circle btn-primary bg-[#ff6e13]  border-0">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                 </button>
             </td>
@@ -33,8 +33,8 @@ const MyToy = ({ toy, handleDelete}) => {
             <td> ${price}</td>
             <td>{quantity}</td>
             <th className='text-center'>
-                <Link to={`/alltoys/${_id}`}><button className='border-0 btn btn-primary  bg-[#ff6e13] opacity-75 text-white'>View Details</button></Link>
-                <Link to={`/update/${_id}`}><button className='border-0 btn btn-primary bg-[#ff6e13] opacity-75 text-white ml-4'>Update</button></Link>
+                <Link to={`/alltoys/${_id}`}><button className='border-0 btn btn-primary  bg-[#ff6e13]  text-white'>View Details</button></Link>
+                <Link to={`/update/${_id}`}><button className='border-0 btn btn-primary bg-[#ff6e13]  text-white ml-4'>Update</button></Link>
             </th>
         </tr>
     );

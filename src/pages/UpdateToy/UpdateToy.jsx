@@ -142,7 +142,7 @@ const UpdateToy = () => {
                 {/* Button */}
                 <button
                     type="submit"
-                    className="w-full h-10 mt-6 font-medium text-white transition-all bg-[#ff6e13] opacity-75 rounded hover:bg-gray-600"
+                    className="w-full h-10 mt-6 font-medium text-white transition-all bg-[#ff6e13]  rounded hover:bg-gray-600"
                 >
                     Update A Toy
                 </button>

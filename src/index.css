@@ -4,4 +4,5 @@
 
 .menu li a.active {
     color: #ff6e13;
+    background: rgb(219, 219, 219);
 }
