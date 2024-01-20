@@ -1,5 +1,6 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
@@ -18,7 +19,8 @@ const Banner = () => {
               Explore our wide range of innovative and <br />
               educational toys for engineering, language learning, and more!
             </p>
-            <button className="btn btn-active bg-[#ff6e13] border-0 font-bold">Get Started</button>
+            <Link to='/allToys' className="btn btn-active bg-[#ff6e13] border-0 font-bold">Get Started</Link>
+            
           </Fade>
         </div>
       </div>
