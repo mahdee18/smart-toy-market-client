@@ -17,10 +17,11 @@ const Facilities = () => {
                     <p>The widest toy range.</p>
                 </div>
                 <div data-aos="zoom-in" className='text-center p-10 rounded shadow-xl space-y-3'>
-                    <img className='mx-auto' src='https://5.imimg.com/data5/SE/KF/MY-23219015/e-commerce-website-500x500.png' alt="" />
+                    <img className='mx-auto' src='https://www.pixerea.co.in/images/e-commerce.png' alt="" />
                     <h1 className='text-2xl font-bold'>Online Store</h1>
                     <p>Easiest online shopping.</p>
-                </div>
+                </div>                    
+                
                 <div data-aos="zoom-in" className='text-center p-10 rounded shadow-xl space-y-3'>
                     <img className='mx-auto' src='https://th.bing.com/th/id/OIP.LVWEW_dDEj6rr_Fj3DxnTwHaHa?rs=1&pid=ImgDetMain' alt="" />
                     <h1 className='text-2xl font-bold'>Delivery</h1>
