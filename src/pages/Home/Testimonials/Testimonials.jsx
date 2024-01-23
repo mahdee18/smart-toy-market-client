@@ -19,10 +19,10 @@ const Testimonials = () => {
                                             <h6 className="font-bold text-sm uppercase text-gray-600">John Doe</h6>
                                         </div>
                                     </div>
-                                    <div className="w-full">
+                                    <div className="w-full ">
                                         <p className="text-sm leading-tight">
                                             <span className="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quod necessitatibus, labore sapiente, est, dignissimos ullam error ipsam sint quam tempora vel.
+                                            Unlocking language skills! These toys are a fantastic resource for language learning. My kids are excited about words and languages, thanks to these engaging toys.
                                             <span className="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
                                         </p>
                                     </div>
@@ -39,10 +39,10 @@ const Testimonials = () => {
                                             <h6 className="font-bold text-sm uppercase text-gray-600">Jane Smith</h6>
                                         </div>
                                     </div>
-                                    <div className="w-full">
+                                    <div className="w-full h-[80px]">
                                         <p className="text-sm leading-tight">
                                             <span className="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>
-                                            Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolore quod necessitatibus, labore sapiente, est, dignissimos ullam error ipsam sint quam tempora vel.
+                                            Future innovator alert! These engineering toys captivated my child's interest in science and technology. Exceptional variety and quality. A must-have for young minds.
                                             <span className="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
                                         </p>
                                     </div>
@@ -61,10 +61,10 @@ const Testimonials = () => {
                                             <h6 className="font-bold text-sm uppercase text-gray-600">Mike Johnson</h6>
                                         </div>
                                     </div>
-                                    <div className="w-full">
+                                    <div className="w-full h-[80px]">
                                         <p className="text-sm leading-tight">
                                             <span className="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quod necessitatibus, labore sapiente, est, dignissimos ullam error ipsam sint quam tempora vel.
+                                            Educational play at its best! These math toys are a game-changer. My child not only learned but loved every moment of the process. Highly recommended!
                                             <span className="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
                                         </p>
                                     </div>
@@ -81,10 +81,10 @@ const Testimonials = () => {
                                             <h6 className="font-bold text-sm uppercase text-gray-600">Emily Thompson</h6>
                                         </div>
                                     </div>
-                                    <div className="w-full">
+                                    <div className="w-full h-[80px]">
                                         <p className="text-sm leading-tight">
                                             <span className="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quod necessitatibus, labore sapiente, est, dignissimos ullam error ipsam sint quam tempora vel.
+                                            Language made fun! These toys transformed learning into a playful experience. My kids now eagerly explore languages with these engaging toys.
                                             <span className="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
                                         </p>
                                     </div>
@@ -103,10 +103,10 @@ const Testimonials = () => {
                                             <h6 className="font-bold text-sm uppercase text-gray-600">Nevada Herbertson</h6>
                                         </div>
                                     </div>
-                                    <div className="w-full">
+                                    <div className="w-full h-[80px]">
                                         <p className="text-sm leading-tight">
                                             <span className="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quod necessitatibus, labore sapiente, est, dignissimos ullam error ipsam sint quam tempora vel.
+                                            Engineer in the making! These toys ignited my child's creativity and problem-solving. A perfect blend of education and entertainment.
                                             <span className="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
                                         </p>
                                     </div>
@@ -123,10 +123,10 @@ const Testimonials = () => {
                                             <h6 className="font-bold text-sm uppercase text-gray-600">Alexandra Johnson</h6>
                                         </div>
                                     </div>
-                                    <div className="w-full">
+                                    <div className="w-full h-[80px]">
                                         <p className="text-sm leading-tight">
                                             <span className="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quod necessitatibus, labore sapiente, est, dignissimos ullam error ipsam sint quam tempora vel.
+                                            Math magic! These toys turned learning into a joy. My child's confidence in math has soared, and they genuinely enjoy the process.
                                             <span className="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
                                         </p>
                                     </div>
