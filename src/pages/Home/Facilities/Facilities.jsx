@@ -6,7 +6,10 @@ AOS.init();
 const Facilities = () => {
     return (
         <div className='my-16 px-6 md:px-14'>
-
+            <div data-aos="zoom-in" className='text-center mb-6'>
+                <h2 className="text-3xl font-extrabold text-gray-900 mb-4">About Us</h2>
+                <p className="text-lg text-gray-600">We make your children happier with the best toys</p>
+            </div>
             <div className='grid md:grid-cols-4 gap-4'>
                 <div data-aos="zoom-in" className='text-center p-10 rounded shadow-xl space-y-3'>
                     <img className='mx-auto' src='https://cdn1.iconfinder.com/data/icons/big-data-orchid-vol-1/256/Feature_Selection-256.png' alt="" />
