@@ -19,7 +19,7 @@ const Testimonials = () => {
                                             <h6 className="font-bold text-sm uppercase text-gray-600">John Doe</h6>
                                         </div>
                                     </div>
-                                    <div className="w-full ">
+                                    <div className="w-full h-[80px]">
                                         <p className="text-sm leading-tight">
                                             <span className="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>
                                             Unlocking language skills! These toys are a fantastic resource for language learning. My kids are excited about words and languages, thanks to these engaging toys.
