@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const CarouselMain = () => {
     const [currentSlider, setCurrentSlider] = useState(0);
-    const sliders = [{ img: "https://i5.walmartimages.com/asr/b06f9009-4aa8-4bdd-8559-498b21971489_1.affe7ba283dbb15367933ad26c6c3d91.jpeg", tags: "Room", }, { img: "https://th.bing.com/th/id/OIP.BBftAWLH_5FeTmZgQm8mUwHaHa?w=800&h=800&rs=1&pid=ImgDetMain", tags: "Room", }, { img: "https://m.media-amazon.com/images/I/715pZyRnyeL._AC_SX569_.jpg", tags: "Room", }, { img: "https://th.bing.com/th/id/OIP.UVj71BrUO93IXor4uRvGygHaHa?rs=1&pid=ImgDetMain", tags: "Room", }, { img: "https://m.media-amazon.com/images/I/91nO8S2XFPL._AC_SL1500_.jpg", tags: "Room", },];
+    const sliders = [{ img: "https://i5.walmartimages.com/asr/b06f9009-4aa8-4bdd-8559-498b21971489_1.affe7ba283dbb15367933ad26c6c3d91.jpeg", tags: "Room", }, { img: "https://th.bing.com/th/id/OIP.BBftAWLH_5FeTmZgQm8mUwHaHa?w=800&h=800&rs=1&pid=ImgDetMain", tags: "Room", }, { img: "https://m.media-amazon.com/images/I/715pZyRnyeL._AC_SX569_.jpg", tags: "Room", }, { img: "https://thumbs.dreamstime.com/b/cheerful-baby-boy-playing-colorful-blocks-isolated-white-background-58146907.jpg", tags: "Room", }, { img: "https://m.media-amazon.com/images/I/91nO8S2XFPL._AC_SL1500_.jpg", tags: "Room", },];
     const nextSlider = () => setCurrentSlider((currentSlider) => (currentSlider === sliders.length - 1 ? 0 : currentSlider + 1));
     return (
         <div className="sm:w-2/3 h-[540px] md:h-[670px] flex items-center relative overflow-hidden">
