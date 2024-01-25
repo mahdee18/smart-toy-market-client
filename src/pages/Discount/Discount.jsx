@@ -4,7 +4,7 @@ import { Fade } from 'react-awesome-reveal';
 const Discount = () => {
     return (
         <>
-            <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+            <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark mx-5">
                 <div className="container mx-auto">
                     <div className="flex flex-wrap items-center justify-between -mx-4">
                         <div className="w-full px-4 lg:w-6/12">
@@ -613,17 +613,13 @@ const Discount = () => {
                                     Why Choose Us
                                 </span>
                                 <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]">
-                                    Make your customers happy by giving services.
+                                We help you take care of the kids
                                 </h2>
                                 <p className="mb-5 text-base text-body-color dark:text-dark-6">
-                                    It is a long established fact that a reader will be distracted
-                                    by the readable content of a page when looking at its layout.
-                                    The point of using Lorem Ipsum is that it has a more-or-less.
+                                only do we offer an enchanting array of toys, but we are also deeply committed to ensuring the utmost safety for your children as they play, learn, and immerse themselves in pure joy! Not only do we offer an enchanting array of toys,
                                 </p>
                                 <p className="mb-8 text-base text-body-color dark:text-dark-6">
-                                    A domain name is one of the first steps to establishing your
-                                    brand. Secure a consistent brand image with a domain name that
-                                    matches your business.
+                                but we are also deeply committed to ensuring the utmost safety for your children as they play, learn, and immerse themselves in pure joy! Dive into a world of endless possibilities with our meticulously curated selection, dedicated to sparking their imagination and nurturing their well-being.
                                 </p>
                                 <a
                                     href="javascript:void(0)"
