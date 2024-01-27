@@ -6,8 +6,8 @@ const ProductDetails = () => {
     const { category, picture, name, price, rating, quantity, seller, description, email } = toy
     console.log(toy)
     return (
-        <div className=" mt-10 mx-auto bg-white rounded-lg shadow-md overflow-hidden w-full flex items-center">
-            <img className="w-1/2 object-cover" src={picture} alt={name} />
+        <div className=" mt-10 mx-auto bg-white rounded-lg shadow-md overflow-hidden w-full flex items-center justify-center">
+            <img className="w-[400px] object-cover h-[400px]" src={picture} alt={name} />
             <div className="px-4 py-4 w-1/2">
                 <h1 className="text-2xl font-bold  text-gray-800">{name}</h1>
                 <div className="text-gray-500 text-lg mt-2">

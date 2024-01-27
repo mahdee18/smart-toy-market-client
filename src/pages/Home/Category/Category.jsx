@@ -28,7 +28,7 @@ const Category = () => {
       <Fade direction='up' triggerOnce>
         <div className="text-center pt-12">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Categories</h2>
-          <p className="text-lg text-gray-600">Browse through different toy categories.</p>
+          <p className="text-lg text-gray-600 pb-4">Browse through different toy categories.</p>
         </div>
       </Fade>
 
