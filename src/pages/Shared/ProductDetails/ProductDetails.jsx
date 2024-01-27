@@ -15,10 +15,9 @@ const ProductDetails = () => {
                     <p className="py-2 text-2xl"><strong> ${price}</strong></p>
                     <p className="font-semibold"> {description}</p>
                     <p className=" mt-2"><strong>Category:</strong> {category}</p>
-                    <p className=""><strong>Rating:</strong> {rating} <Rating></Rating></p>
-                    <p className="py-2"><strong>Quantity: </strong>{quantity}</p>
-                    <p className=""><strong>Seller: </strong>{seller}</p>
-                    <p className="py-2"><strong>Email: </strong>{email}</p>
+                    <p className='flex py-2 gap-2 items-center '><strong>Rating:</strong><span>{toy.rating}</span><Rating name="half-rating-read" defaultValue={rating} precision={0.1} readOnly /> </p>
+                    <p className=""><strong>Quantity: </strong>{quantity}</p>
+                    <p className="pt-2"><strong>Seller: </strong>{seller}</p>
                 </div>
             </div>
         </div>
