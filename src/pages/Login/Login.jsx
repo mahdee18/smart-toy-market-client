@@ -12,7 +12,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location?.state?.from?.pathname || '/'
-
+    // Handle Login
     const handleLogIn = (event) => {
         event.preventDefault()
         const form = event.target;
